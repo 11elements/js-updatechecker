@@ -1,0 +1,31 @@
+{
+  "name": "@11elements/js-updatechecker",
+  "version": "1.0.0",
+  "description": "Check for updates on the projects github repository",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11elements/js-updatechecker.git"
+  },
+  "author": "Ewerton Tiago Azevedo <ewerton.azevedo@live.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/11elements/js-updatechecker/issues"
+  },
+  "homepage": "https://github.com/11elements/js-updatechecker#readme",
+  "dependencies": {
+    "@11elements/js-logcontroller": "^1.5.4",
+    "@types/node": "^13.13.5",
+    "install": "^0.13.0",
+    "npm": "^6.14.5",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3"
+  }
+}
