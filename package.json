@@ -1,6 +1,6 @@
 {
   "name": "@11elements/js-updatechecker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Check for updates on the projects github repository",
   "main": "./dist/index.js",
   "scripts": {

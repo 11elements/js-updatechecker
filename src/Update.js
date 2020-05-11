@@ -2,13 +2,14 @@
 const { exec } = require('child_process');
 const LogController = require('@11elements/js-logcontroller');
 
-let wasUpdated = async () => {
+let wasUpdated = async (intervalKey) => {
     const info = {}
     return new Promise( ( resolve, reject )=> {
         try{
             exec(`git rev-parse @`, ( err, stdout, stderr ) => {
                 if ( err ) {
-                    LogController.error( `Error trying to get status of local branch: ${ err }` );
+                    LogController.error( `Error trying to get status of local branch: ${ err }. Clearing Interval` );
+                    clearInterval(intervalKey);
                     resolve( false );
                 }
                 if ( stdout ){
@@ -66,5 +67,5 @@ let installUpdates = async () => {
     }
 }
 
-module.exports = {'check': () => wasUpdated()}
+module.exports = {'check': (intervalKey) => wasUpdated(intervalKey)}
 
